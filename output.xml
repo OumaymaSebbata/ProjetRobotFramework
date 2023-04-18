@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.3 on win32)" generated="20230418 16:15:05.969" rpa="false" schemaversion="3">
+<suite id="s1" name="FirstTest" source="c:\Users\ib\Desktop\projet JAVA\ProjetRobotFramework\FirstTest.robot">
+<test id="s1-t1" name="Test Buy a Products" line="27">
+<kw name="Open Browser" library="SeleniumLibrary" type="SETUP">
+<arg>${monURL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230418 16:15:06.187" level="INFO">Opening browser 'chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<status status="PASS" starttime="20230418 16:15:06.187" endtime="20230418 16:15:07.579"/>
+</kw>
+<kw name="connexion">
+<arg>standard_user</arg>
+<arg>secret_sauce</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:user-name</arg>
+<arg>${username}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230418 16:15:07.581" level="INFO">Typing text 'standard_user' into text field 'id:user-name'.</msg>
+<status status="PASS" starttime="20230418 16:15:07.581" endtime="20230418 16:15:07.688"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:password</arg>
+<arg>${password}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230418 16:15:07.688" level="INFO">Typing password into text field 'id:password'.</msg>
+<msg timestamp="20230418 16:15:07.726" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230418 16:15:07.773" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230418 16:15:07.688" endtime="20230418 16:15:07.774"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:login-button</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230418 16:15:07.774" level="INFO">Clicking button 'id:login-button'.</msg>
+<status status="PASS" starttime="20230418 16:15:07.774" endtime="20230418 16:15:07.870"/>
+</kw>
+<status status="PASS" starttime="20230418 16:15:07.580" endtime="20230418 16:15:07.871"/>
+</kw>
+<kw name="verifier l'affichage de la page Products">
+<kw name="Page Should Contain Element" library="SeleniumLibrary">
+<arg>xpath://span[contains(text(),'Products')]</arg>
+<doc>Verifies that element ``locator`` is found on the current page.</doc>
+<msg timestamp="20230418 16:15:07.883" level="INFO">Current page contains element 'xpath://span[contains(text(),'Products')]'.</msg>
+<status status="PASS" starttime="20230418 16:15:07.872" endtime="20230418 16:15:07.883"/>
+</kw>
+<status status="PASS" starttime="20230418 16:15:07.871" endtime="20230418 16:15:07.884"/>
+</kw>
+<kw name="choisir un produit">
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:add-to-cart-sauce-labs-backpack</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230418 16:15:07.886" level="INFO">Clicking button 'id:add-to-cart-sauce-labs-backpack'.</msg>
+<status status="PASS" starttime="20230418 16:15:07.885" endtime="20230418 16:15:07.940"/>
+</kw>
+<status status="PASS" starttime="20230418 16:15:07.884" endtime="20230418 16:15:07.941"/>
+</kw>
+<kw name="voir le panier">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:shopping_cart_container</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230418 16:15:07.943" level="INFO">Clicking element 'id:shopping_cart_container'.</msg>
+<status status="PASS" starttime="20230418 16:15:07.942" endtime="20230418 16:15:07.985"/>
+</kw>
+<status status="PASS" starttime="20230418 16:15:07.941" endtime="20230418 16:15:07.985"/>
+</kw>
+<kw name="checkout">
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>id:checkout</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230418 16:15:07.987" level="INFO">Clicking element 'id:checkout'.</msg>
+<status status="PASS" starttime="20230418 16:15:07.986" endtime="20230418 16:15:08.030"/>
+</kw>
+<status status="PASS" starttime="20230418 16:15:07.986" endtime="20230418 16:15:08.030"/>
+</kw>
+<kw name="checkout information">
+<arg>OUMAYMA</arg>
+<arg>OUMAYMA</arg>
+<arg>222</arg>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id:first-name</arg>
+<arg>${firstname}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230418 16:15:08.032" level="INFO">Typing text 'OUMAYMA' into text field 'id:first-name'.</msg>
+<status status="PASS" starttime="20230418 16:15:08.032" endtime="20230418 16:15:08.116"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:last-name</arg>
+<arg>${lastname}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230418 16:15:08.117" level="INFO">Typing password into text field 'id:last-name'.</msg>
+<msg timestamp="20230418 16:15:08.151" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230418 16:15:08.197" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230418 16:15:08.116" endtime="20230418 16:15:08.198"/>
+</kw>
+<kw name="Input Password" library="SeleniumLibrary">
+<arg>id:postal-code</arg>
+<arg>${postalcode}</arg>
+<doc>Types the given password into the text field identified by ``locator``.</doc>
+<msg timestamp="20230418 16:15:08.198" level="INFO">Typing password into text field 'id:postal-code'.</msg>
+<msg timestamp="20230418 16:15:08.232" level="INFO">Temporally setting log level to: NONE</msg>
+<msg timestamp="20230418 16:15:08.269" level="INFO">Log level changed from NONE to INFO.</msg>
+<status status="PASS" starttime="20230418 16:15:08.198" endtime="20230418 16:15:08.271"/>
+</kw>
+<kw name="Click Button" library="SeleniumLibrary">
+<arg>id:continue</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<msg timestamp="20230418 16:15:08.271" level="INFO">Clicking button 'id:continue'.</msg>
+<status status="PASS" starttime="20230418 16:15:08.271" endtime="20230418 16:15:08.324"/>
+</kw>
+<status status="PASS" starttime="20230418 16:15:08.031" endtime="20230418 16:15:08.324"/>
+</kw>
+<status status="PASS" starttime="20230418 16:15:06.185" endtime="20230418 16:15:08.325"/>
+</test>
+<status status="PASS" starttime="20230418 16:15:05.973" endtime="20230418 16:15:08.327"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="FirstTest">FirstTest</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
